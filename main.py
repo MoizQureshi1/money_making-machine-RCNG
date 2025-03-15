@@ -26,7 +26,7 @@ if st.button("Generate Money"):  # When user clicks the button
 def fetch_side_hustle():
     try:
         # Try to get data from local server
-        response = requests.get("http://127.0.0.1:8000/side_hustles")
+        response = requests.get("https://simple-api-rcng.vercel.app/side_hustles")
         if response.status_code == 200:  # If request successful
             hustles = response.json()  # Convert response to JSON
             return hustles["side_hustle"]  # Return the hustle idea
@@ -48,7 +48,7 @@ if st.button("Generate Hustle"):  # When user clicks button
 def fetch_money_quote():
     try:
         # Try to get quote from local server
-        response = requests.get("http://127.0.0.1:8000/money_quotes")
+        response = requests.get("https://simple-api-rcng.vercel.app/money_quotes")
         if response.status_code == 200:  # If request successful
             quotes = response.json()  # Convert response to JSON
             return quotes["money_quote"]  # Return the quote
